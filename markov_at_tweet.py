@@ -6,12 +6,14 @@ from random import choice
 
 class SimpleMarkovGenerator(object):
     char_lmt = None
+    #read_file = None
 
     def read_file(self, filename):
      
 
         #opened_filename = open(filename)
         read_filename = (open(filename)).read()
+        #read_file = self.read_file.append(read_filename)
         return read_filename
 
     def make_chains(self, read_filename):
@@ -54,15 +56,15 @@ class SimpleMarkovGenerator(object):
             markov_chn = markov_chn + " " + key_value
             key = (key[1], key_value)
         
-        count = len(markov_chn)
+        
 
         if self.char_lmt > 140:
             markov_chn = markov_chn[:140]
-            print markov_chn
+            return markov_chn
           #  print len(markov_chn)
            # print "Its a tweet!"
         else:
-            print markov_chn
+            return markov_chn
             #print len(markov_chn)
             #print "Its not a tweet..."
             #print len(markov_chn)
@@ -101,6 +103,7 @@ if __name__ == "__main__":
     #chain_dict = instance.make_chains(instance.read_file(filename))
     #chain_dict = instance_2.make_chains(instance_2.read_file(filename))
     chain_dict = tweet_instance.make_chains(tweet_instance.read_file(filename))
+    #print "this is chain dict %s" % chain_dict
 
     #random_text = instance.make_text(chain_dict)
     #random_text = instance_2.make_text(chain_dict)

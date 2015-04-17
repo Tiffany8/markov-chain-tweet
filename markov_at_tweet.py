@@ -59,12 +59,12 @@ class SimpleMarkovGenerator(object):
         if self.char_lmt > 140:
             markov_chn = markov_chn[:140]
             print markov_chn
-            print len(markov_chn)
-            print "Its a tweet!"
+          #  print len(markov_chn)
+           # print "Its a tweet!"
         else:
             print markov_chn
-            print len(markov_chn)
-            print "Its not a tweet..."
+            #print len(markov_chn)
+            #print "Its not a tweet..."
             #print len(markov_chn)
             #cut off the markov_chn at 140 char
 

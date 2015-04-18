@@ -34,7 +34,7 @@ if __name__ == "__main__":
     random_text = tweet_bot_instance.make_text(chain_dict)
 
 
-    print random_text
+    #print random_text
 #tweet_this = tweet_bot_instance.make_text(txt_filename)
 #print random_text
 

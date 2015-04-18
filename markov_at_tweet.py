@@ -56,10 +56,10 @@ class SimpleMarkovGenerator(object):
             markov_chn = markov_chn + " " + key_value
             key = (key[1], key_value)
         
-        
+        #count = len(markov_chn)
 
-        if self.char_lmt > 140:
-            markov_chn = markov_chn[:140]
+        if self.char_lmt > 139:
+            markov_chn = markov_chn[:139]
             return markov_chn
           #  print len(markov_chn)
            # print "Its a tweet!"
@@ -81,7 +81,7 @@ class SimpleMarkovGenerator(object):
 class TweetableMarkovGenerator(SimpleMarkovGenerator):
 
     def make_text(self, chains):
-        return super(TweetableMarkovGenerator, self).make_text(chains, 141)
+        return super(TweetableMarkovGenerator, self).make_text(chains, 139)
 
 
 if __name__ == "__main__":
